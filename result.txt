@@ -1,0 +1,16 @@
+ifft script run started on Tue May  9 15:49:14 2017
+run on machine coe-ee-cad27.sjsuad.sjsu.edu
+
+Run with a clock period of 4.0
+student names
+  praveen  2876
+  harika  8930
+options syn False gates False
+debug True 
+VCS simulation worked
+debug True 
+NCverilog simulation worked
+Synthesis finished OK
+debug True
+Gate level simulation worked
+Completed the ifft run

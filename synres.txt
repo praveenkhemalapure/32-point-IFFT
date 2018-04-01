@@ -1,0 +1,2553 @@
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+              Version K-2015.06-SP5-1 for linux64 - Feb 26, 2016 
+                                        
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+set link_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25 /apps/synopsys/I-2013.12-SP5/libraries/syn/dw_foundation.sldb}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25 /apps/synopsys/I-2013.12-SP5/libraries/syn/dw_foundation.sldb
+set target_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25
+read_verilog twiddle_32.v
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25'
+Loading db file '/apps/synopsys/I-2013.12-SP5/libraries/syn/dw_foundation.sldb'
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/gtech.db'
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/standard.sldb'
+  Loading link library 'tc240c'
+  Loading link library 'gtech'
+Loading verilog file '/home/011432876@SJSUAD.SJSU.EDU/287/project/submission/twiddle_32.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/twiddle_32.v
+
+Statistics for case statements in always block at line 10 in file
+	'/home/011432876@SJSUAD.SJSU.EDU/287/project/submission/twiddle_32.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            11            |    auto/auto     |
+|            33            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Current design is now '/home/011432876@SJSUAD.SJSU.EDU/287/project/submission/twiddle.db:twiddle'
+Loaded 1 design.
+Current design is 'twiddle'.
+twiddle
+set_max_delay 2.8 -from [all_inputs] -to [all_outputs]
+1
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Analyzing: "/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25"
+Library analysis succeeded.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.5.1 |   *     |
+| Licensed DW Building Blocks        | I-2013.12-DWBB_201312.5 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 5 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'twiddle'
+
+Loaded alib file './alib-52/tc240c.db_NOMIN25.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'twiddle'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Warning: Main library 'tc240c' does not specify the following unit required for power: 'Leakage Power'. (PWR-424)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:04     184.5      0.00       0.0       0.0                              0.0000
+    0:00:04     221.5      0.00       0.0       0.0                              0.0000
+    0:00:04     221.5      0.00       0.0       0.0                              0.0000
+    0:00:04     221.5      0.00       0.0       0.0                              0.0000
+    0:00:04     220.5      0.00       0.0       0.0                              0.0000
+    0:00:04     212.5      0.00       0.0       0.0                              0.0000
+    0:00:04     212.5      0.00       0.0       0.0                              0.0000
+    0:00:05     212.5      0.00       0.0       0.0                              0.0000
+    0:00:05     212.5      0.00       0.0       0.0                              0.0000
+    0:00:05     187.5      0.00       0.0       0.0                              0.0000
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Warning: Main library 'tc240c' does not specify the following unit required for power: 'Leakage Power'. (PWR-424)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+1
+read_verilog butterfly.v
+Loading verilog file '/home/011432876@SJSUAD.SJSU.EDU/287/project/submission/butterfly.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/butterfly.v
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/butterfly.v:17: Redeclaration of port 'D_imag'. (VER-331)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/butterfly.v:17: Port D_imag is implicitly typed  (VER-987)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/butterfly.v:17: Redeclaration of port 'D_real'. (VER-331)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/butterfly.v:17: Port D_real is implicitly typed  (VER-987)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/butterfly.v:18: Redeclaration of port 'C_real'. (VER-331)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/butterfly.v:18: Port C_real is implicitly typed  (VER-987)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/butterfly.v:18: Redeclaration of port 'C_imag'. (VER-331)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/butterfly.v:18: Port C_imag is implicitly typed  (VER-987)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/butterfly.v:30: Redeclaration of port 'pout'. (VER-331)
+
+Inferred memory devices in process
+	in routine butterfly line 81 in file
+		'/home/011432876@SJSUAD.SJSU.EDU/287/project/submission/butterfly.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     C_imag_reg      | Flip-flop |  37   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     C_real_reg      | Flip-flop |  37   |  Y  | N  | Y  | N  | N  | N  | N  |
+| twiddle_imag_1_reg  | Flip-flop |  36   |  Y  | N  | Y  | N  | N  | N  | N  |
+| twiddle_real_1_reg  | Flip-flop |  36   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   CCCCCC_imag_reg   | Flip-flop |  37   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     pushin3_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pushin2_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   CCCCC_imag_reg    | Flip-flop |  37   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    CCCC_imag_reg    | Flip-flop |  37   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    CCC_imag_reg     | Flip-flop |  37   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   CCCCCC_real_reg   | Flip-flop |  37   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   CCCCC_real_reg    | Flip-flop |  37   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    CCCC_real_reg    | Flip-flop |  37   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    CCC_real_reg     | Flip-flop |  37   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     pushin4_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pushin1_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pushin5_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     real_cc_reg     | Flip-flop |  37   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     imag_cc_reg     | Flip-flop |  37   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     D_real_reg      | Flip-flop |  73   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     D_imag_reg      | Flip-flop |  73   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/011432876@SJSUAD.SJSU.EDU/287/project/submission/butterfly.db:butterfly'
+Loaded 1 design.
+Current design is 'butterfly'.
+butterfly
+create_clock clk -name clk -period 3.0
+1
+set_propagated_clock clk
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_clock_uncertainty 0.25 clk
+1
+set_propagated_clock clk
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_output_delay 0.5 -clock clk [all_outputs]
+1
+set all_inputs_wo_rst_clk [remove_from_collection [remove_from_collection [all_inputs] [get_port clk]] [get_port rst]]
+{A_real[36] A_real[35] A_real[34] A_real[33] A_real[32] A_real[31] A_real[30] A_real[29] A_real[28] A_real[27] A_real[26] A_real[25] A_real[24] A_real[23] A_real[22] A_real[21] A_real[20] A_real[19] A_real[18] A_real[17] A_real[16] A_real[15] A_real[14] A_real[13] A_real[12] A_real[11] A_real[10] A_real[9] A_real[8] A_real[7] A_real[6] A_real[5] A_real[4] A_real[3] A_real[2] A_real[1] A_real[0] A_imag[36] A_imag[35] A_imag[34] A_imag[33] A_imag[32] A_imag[31] A_imag[30] A_imag[29] A_imag[28] A_imag[27] A_imag[26] A_imag[25] A_imag[24] A_imag[23] A_imag[22] A_imag[21] A_imag[20] A_imag[19] A_imag[18] A_imag[17] A_imag[16] A_imag[15] A_imag[14] A_imag[13] A_imag[12] A_imag[11] A_imag[10] A_imag[9] A_imag[8] A_imag[7] A_imag[6] A_imag[5] A_imag[4] A_imag[3] A_imag[2] A_imag[1] A_imag[0] B_real[36] B_real[35] B_real[34] B_real[33] B_real[32] B_real[31] B_real[30] B_real[29] B_real[28] B_real[27] B_real[26] B_real[25] B_real[24] B_real[23] B_real[22] B_real[21] B_real[20] B_real[19] B_real[18] B_real[17] B_real[16] B_real[15] B_real[14] B_real[13] B_real[12] B_real[11] ...}
+set_driving_cell -lib_cell CND2X1 $all_inputs_wo_rst_clk
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+set_input_delay 0.6 -clock clk $all_inputs_wo_rst_clk
+1
+set_output_delay 0.6 -clock clk [all_outputs]
+1
+set_fix_hold [ get_clocks clk ]
+1
+set_output_delay 0.3 -clock clk [all_outputs]
+1
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'butterfly'
+
+Loaded alib file './alib-52/tc240c.db_NOMIN25.alib'
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'butterfly'
+ Implement Synthetic for 'butterfly'.
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/dw_foundation.sldb'
+  Processing 'butterfly_DW02_mult_4_stage_J2_0'
+  Processing 'butterfly_DW02_mult_4_stage_J2_1'
+  Processing 'butterfly_DW02_mult_4_stage_J2_2'
+  Processing 'butterfly_DW02_mult_4_stage_J2_3'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Warning: Main library 'tc240c' does not specify the following unit required for power: 'Leakage Power'. (PWR-424)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Checking pipeline property of cell m4 (design butterfly_DW02_mult_4_stage_J2_0). (RTDC-137)
+Information: cell m4 (design butterfly_DW02_mult_4_stage_J2_0) is a pipeline. (RTDC-139)
+Information: Checking pipeline property of cell m3 (design butterfly_DW02_mult_4_stage_J2_1). (RTDC-137)
+Information: cell m3 (design butterfly_DW02_mult_4_stage_J2_1) is a pipeline. (RTDC-139)
+Information: Checking pipeline property of cell m2 (design butterfly_DW02_mult_4_stage_J2_2). (RTDC-137)
+Information: cell m2 (design butterfly_DW02_mult_4_stage_J2_2) is a pipeline. (RTDC-139)
+Information: Checking pipeline property of cell m1 (design butterfly_DW02_mult_4_stage_J2_3). (RTDC-137)
+Information: cell m1 (design butterfly_DW02_mult_4_stage_J2_3) is a pipeline. (RTDC-139)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+  Mapping Optimization (Phase 1)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+  Retiming butterfly_DW02_mult_4_stage_J2_0 (m4)
+  Preferred flip-flop is CFD2XL with setup = 0.21
+
+
+  Retiming base-clock clk, rising edge.
+  Beginning minimum period retiming ...
+  ... minimum period retiming done.
+  Beginning minimum area retiming step 1 ...
+  ... minimum area retiming step 1 done.
+  Beginning minimum area retiming step 2 ...
+  5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100% 
+  ... minimum area retiming step 2 done.
+  Beginning minimum area retiming step 3 ...
+  10% 20% 30% 40% 50% 60% 70% ... 100% 
+  ... minimum area retiming step 3 done.
+  Beginning final register move ...
+  ... final register move done.
+  Lower bound estimate = 5.11
+  Critical path length = 5.11
+  Clock correction = 0.94 (clock-to-Q delay = 0.48, setup = 0.21, uncertainty = 0.25)
+  Retiming butterfly_DW02_mult_4_stage_J2_1 (m3)
+  Preferred flip-flop is CFD2XL with setup = 0.21
+
+
+  Retiming base-clock clk, rising edge.
+  Beginning minimum period retiming ...
+  ... minimum period retiming done.
+  Beginning minimum area retiming step 1 ...
+  ... minimum area retiming step 1 done.
+  Beginning minimum area retiming step 2 ...
+  5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100% 
+  ... minimum area retiming step 2 done.
+  Beginning minimum area retiming step 3 ...
+  10% 20% 30% 40% 50% 60% 70% ... 100% 
+  ... minimum area retiming step 3 done.
+  Beginning final register move ...
+  ... final register move done.
+  Lower bound estimate = 5.10
+  Critical path length = 5.10
+  Clock correction = 0.94 (clock-to-Q delay = 0.48, setup = 0.21, uncertainty = 0.25)
+  Retiming butterfly_DW02_mult_4_stage_J2_2 (m2)
+  Preferred flip-flop is CFD2XL with setup = 0.21
+
+
+  Retiming base-clock clk, rising edge.
+  Beginning minimum period retiming ...
+  ... minimum period retiming done.
+  Beginning minimum area retiming step 1 ...
+  ... minimum area retiming step 1 done.
+  Beginning minimum area retiming step 2 ...
+  5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100% 
+  ... minimum area retiming step 2 done.
+  Beginning minimum area retiming step 3 ...
+  10% 20% 30% 40% 50% 60% 70% ... 100% 
+  ... minimum area retiming step 3 done.
+  Beginning final register move ...
+  ... final register move done.
+  Lower bound estimate = 4.93
+  Critical path length = 4.93
+  Clock correction = 0.94 (clock-to-Q delay = 0.48, setup = 0.21, uncertainty = 0.25)
+  Retiming butterfly_DW02_mult_4_stage_J2_3 (m1)
+  Preferred flip-flop is CFD2XL with setup = 0.21
+
+
+  Retiming base-clock clk, rising edge.
+  Beginning minimum period retiming ...
+  ... minimum period retiming done.
+  Beginning minimum area retiming step 1 ...
+  ... minimum area retiming step 1 done.
+  Beginning minimum area retiming step 2 ...
+  5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100% 
+  ... minimum area retiming step 2 done.
+  Beginning minimum area retiming step 3 ...
+  10% 20% 30% 40% 50% 60% 70% ... 100% 
+  ... minimum area retiming step 3 done.
+  Beginning final register move ...
+  ... final register move done.
+  Lower bound estimate = 4.88
+  Critical path length = 4.88
+  Clock correction = 0.94 (clock-to-Q delay = 0.48, setup = 0.21, uncertainty = 0.25)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+  Mapping Optimization (Phase 2)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:47   56487.5      2.25     380.8       0.0 m1/clk_r_REG3_S2/D           0.0000      0.00  
+    0:00:47   56487.5      2.25     380.8       0.0 m1/clk_r_REG3_S2/D           0.0000      0.00  
+    0:00:50   55378.0      2.05     354.4       0.0 m2/clk_r_REG24_S2/D          0.0000      0.00  
+    0:00:52   55257.5      1.99     345.5       0.0 m3/clk_r_REG13_S2/D          0.0000      0.00  
+    0:00:54   55258.0      1.94     337.3       0.0 m3/clk_r_REG11_S2/D          0.0000      0.00  
+    0:00:56   55196.5      1.90     328.6       0.0 m2/clk_r_REG20_S2/D          0.0000      0.00  
+    0:00:58   55200.0      1.86     322.9       0.0 m1/clk_r_REG20_S2/D          0.0000      0.00  
+    0:00:59   55261.0      1.84     318.6       0.0 m2/clk_r_REG20_S2/D          0.0000      0.00  
+    0:01:01   55373.5      1.82     315.1       0.0 m2/clk_r_REG20_S2/D          0.0000      0.00  
+    0:01:02   55304.5      1.80     312.2       0.0 m1/clk_r_REG20_S2/D          0.0000      0.00  
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Added key list 'DesignWare' to design 'butterfly'. (DDB-72)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:01:15   41182.0      2.45     423.1       0.0                              0.0000      0.00  
+    0:01:27   43424.5      1.85     348.1       0.0                              0.0000      0.00  
+    0:01:27   43424.5      1.85     348.1       0.0                              0.0000      0.00  
+    0:01:28   43428.5      1.85     348.1       0.0                              0.0000      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:01:34   42850.0      1.79     330.3       0.0                              0.0000      0.00  
+    0:01:36   42870.5      1.79     328.8       0.0                              0.0000      0.00  
+    0:01:37   42887.5      1.79     325.5       0.0                              0.0000      0.00  
+    0:01:37   42887.5      1.79     325.5       0.0                              0.0000      0.00  
+    0:01:58   45056.5      1.59     306.4       0.0                              0.0000      0.00  
+    0:01:58   45056.5      1.59     306.4       0.0                              0.0000      0.00  
+    0:01:58   45100.5      1.56     303.4       0.0                              0.0000      0.00  
+    0:01:58   45100.5      1.56     303.4       0.0                              0.0000      0.00  
+    0:02:28   47363.5      1.46     289.6       0.0                              0.0000      0.00  
+    0:02:28   47363.5      1.46     289.6       0.0                              0.0000      0.00  
+    0:03:08   50960.5      1.27     251.4       0.0                              0.0000      0.00  
+    0:03:08   50960.5      1.27     251.4       0.0                              0.0000      0.00  
+    0:03:40   51890.5      1.25     248.8       0.0                              0.0000      0.00  
+    0:03:40   51890.5      1.25     248.8       0.0                              0.0000      0.00  
+    0:03:47   52309.5      1.24     244.2       0.0                              0.0000      0.00  
+    0:03:47   52309.5      1.24     244.2       0.0                              0.0000      0.00  
+    0:04:07   52768.5      1.23     242.9       0.0                              0.0000      0.00  
+    0:04:07   52768.5      1.23     242.9       0.0                              0.0000      0.00  
+    0:04:22   53394.5      1.20     236.3       0.0                              0.0000      0.00  
+    0:04:22   53394.5      1.20     236.3       0.0                              0.0000      0.00  
+    0:04:23   53394.5      1.20     236.3       0.0                              0.0000      0.00  
+    0:04:24   53411.5      1.19     236.1       0.0 m4/clk_r_REG41_S2/D          0.0000      0.00  
+    0:04:24   53426.5      1.19     235.9       0.0                              0.0000      0.00  
+    0:04:54   54367.5      1.19     234.9       0.0                              0.0000      0.00  
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+    0:04:57   54419.5      1.04     194.6       0.0 m3/clk_r_REG45_S2/D          0.0000      0.00  
+    0:04:58   54452.5      1.02     193.0       0.0                              0.0000      0.00  
+    0:05:40   55959.5      1.00     189.0       0.0                              0.0000      0.00  
+    0:05:40   55959.5      1.00     189.0       0.0                              0.0000      0.00  
+    0:05:42   55871.5      1.00     188.8       0.0                              0.0000      0.00  
+    0:05:42   55871.5      1.00     188.8       0.0                              0.0000      0.00  
+    0:05:42   55871.5      1.00     188.8       0.0                              0.0000      0.00  
+    0:05:42   55871.5      1.00     188.8       0.0                              0.0000      0.00  
+    0:05:42   55881.5      1.00     188.7       0.0                              0.0000      0.00  
+    0:05:42   55881.5      1.00     188.7       0.0                              0.0000      0.00  
+    0:05:48   56005.0      1.00     188.5       0.0                              0.0000      0.00  
+    0:05:48   56005.0      1.00     188.5       0.0                              0.0000      0.00  
+    0:06:05   56457.5      0.97     181.0       0.0                              0.0000      0.00  
+    0:06:05   56457.5      0.97     181.0       0.0                              0.0000      0.00  
+    0:06:06   56458.0      0.97     181.0       0.0                              0.0000      0.00  
+    0:06:06   56458.0      0.97     181.0       0.0                              0.0000      0.00  
+    0:06:07   56469.5      0.97     180.8       0.0                              0.0000      0.00  
+    0:06:07   56469.5      0.97     180.8       0.0                              0.0000      0.00  
+    0:06:07   56469.5      0.97     180.8       0.0                              0.0000      0.00  
+    0:06:07   56469.5      0.97     180.8       0.0                              0.0000      0.00  
+    0:06:07   56469.5      0.97     180.8       0.0                              0.0000      0.00  
+    0:06:07   56469.5      0.97     180.8       0.0                              0.0000      0.00  
+    0:06:08   56469.5      0.97     180.8       0.0                              0.0000      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:06:09   56469.5      0.97     180.8       0.0                              0.0000      0.00  
+    0:06:12   55022.0      0.97     180.0       0.0                              0.0000      0.00  
+    0:06:12   55010.0      0.96     179.9       0.0                              0.0000      0.00  
+    0:06:12   55010.0      0.96     179.9       0.0                              0.0000      0.00  
+    0:06:14   55007.5      0.96     179.8       0.0                              0.0000      0.00  
+    0:06:15   54664.5      0.96     179.6       0.0                              0.0000      0.00  
+    0:06:16   54344.5      0.96     179.4       0.0                              0.0000      0.00  
+    0:06:26   54864.0      0.95     176.1       0.0                              0.0000      0.00  
+    0:06:28   54780.5      0.95     175.4       0.0                              0.0000      0.00  
+    0:06:28   54714.5      0.95     175.1       0.0                              0.0000      0.00  
+    0:06:28   54722.0      0.95     175.1       0.0                              0.0000      0.00  
+    0:06:32   52164.0      0.95     174.1       0.0                              0.0000      0.00  
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'butterfly' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'm1/CLK': 1558 load(s), 1 driver(s)
+Information: State dependent leakage is now switched from off to on.
+Warning: Main library 'tc240c' does not specify the following unit required for power: 'Leakage Power'. (PWR-424)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+read_verilog ifft.v
+Loading verilog file '/home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2455: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2456: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2457: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2458: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2459: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2463: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2464: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2465: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2466: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2467: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2472: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2473: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2474: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2475: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2476: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2482: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2483: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2484: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2485: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2486: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2490: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2491: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2492: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2493: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v:2494: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+$display output: first set of inputs 8th one --- ??????????   
+
+
+Statistics for case statements in always block at line 239 in file
+	'/home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           254            |    auto/auto     |
+|           256            |    auto/auto     |
+|           349            |    auto/auto     |
+|           425            |    auto/auto     |
+|           497            |    auto/auto     |
+|           570            |    auto/auto     |
+|           641            |    auto/auto     |
+|           713            |    auto/auto     |
+|           791            |    auto/auto     |
+|           869            |    auto/auto     |
+|           947            |    auto/auto     |
+|           1024           |    auto/auto     |
+|           1102           |    auto/auto     |
+|           1179           |    auto/auto     |
+|           1256           |    auto/auto     |
+|           1334           |    auto/auto     |
+|           1412           |    auto/auto     |
+===============================================
+$display output: first output stage is 0th ??????????  
+
+$display output: final first output ??????? 
+
+$display output: first stage 8th o/p ?????????? -- ??????????
+$display output: 5th output is ???????
+$display output: 5th output is ???????
+
+Statistics for case statements in always block at line 1536 in file
+	'/home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1548           |    auto/auto     |
+|           1551           |    auto/auto     |
+|           1612           |    auto/auto     |
+|           1663           |    auto/auto     |
+|           1716           |    auto/auto     |
+|           1769           |    auto/auto     |
+|           1823           |    auto/auto     |
+|           1875           |    auto/auto     |
+|           1927           |    auto/auto     |
+|           1980           |    auto/auto     |
+|           2034           |    auto/auto     |
+|           2087           |    auto/auto     |
+|           2143           |    auto/auto     |
+|           2195           |    auto/auto     |
+|           2246           |    auto/auto     |
+|           2298           |    auto/auto     |
+|           2350           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 2432 in file
+	'/home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           2448           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine ifft line 144 in file
+		'/home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  wr_cntr_real_reg   | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     memreal_reg     | Flip-flop | 1184  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ifft line 176 in file
+		'/home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  wr_cntr_imag_reg   | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     memimag_reg     | Flip-flop | 1184  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ifft line 204 in file
+		'/home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     AA_imag_reg     | Flip-flop |  37   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     BB_imag_reg     | Flip-flop |  37   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      stage_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   inp_states_reg    | Flip-flop |  21   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    index_ii_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    index_rr_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     push_1_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     AA_real_reg     | Flip-flop |  37   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     BB_real_reg     | Flip-flop |  37   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ifft line 1507 in file
+		'/home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     CC_real_reg     | Flip-flop |  37   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     CC_imag_reg     | Flip-flop |  37   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     DD_real_reg     | Flip-flop |  37   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     DD_imag_reg     | Flip-flop |  37   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      POUT1_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ifft line 1536 in file
+		'/home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  memimag_op_3_reg   | Flip-flop | 1184  |  Y  | N  | N  | N  | N  | N  | N  |
+|  memreal_op_3_reg   | Flip-flop | 1184  |  Y  | N  | N  | N  | N  | N  | N  |
+|  memimag_op_2_reg   | Flip-flop | 1184  |  Y  | N  | N  | N  | N  | N  | N  |
+|  memimag_op_1_reg   | Flip-flop | 1184  |  Y  | N  | N  | N  | N  | N  | N  |
+|  memreal_op_2_reg   | Flip-flop | 1184  |  Y  | N  | N  | N  | N  | N  | N  |
+|  memimag_op_5_reg   | Flip-flop |  896  |  Y  | N  | N  | N  | N  | N  | N  |
+|    stage_op_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  memreal_op_5_reg   | Flip-flop |  896  |  Y  | N  | N  | N  | N  | N  | N  |
+|  memimag_op_4_reg   | Flip-flop | 1184  |  Y  | N  | N  | N  | N  | N  | N  |
+|    op_states_reg    | Flip-flop |  21   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  memreal_op_4_reg   | Flip-flop | 1184  |  Y  | N  | N  | N  | N  | N  | N  |
+|  memreal_op_1_reg   | Flip-flop | 1184  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ifft line 2432 in file
+		'/home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      doi_1_reg      | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      count_reg      | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      dor_1_reg      | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  final_states_reg   | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    pushout_1_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|    ifft/2458     |   32   |   56    |      5       |
+======================================================
+Presto compilation completed successfully.
+Current design is now '/home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft.db:ifft'
+Loaded 1 design.
+Current design is 'ifft'.
+ifft
+create_clock clk -name clk -period 3.0
+1
+set_propagated_clock clk
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_clock_uncertainty 0.25 clk
+1
+set_propagated_clock clk
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_output_delay 0.5 -clock clk [all_outputs]
+1
+set all_inputs_wo_rst_clk [remove_from_collection [remove_from_collection [all_inputs] [get_port clk]] [get_port rst]]
+{pushin dir[27] dir[26] dir[25] dir[24] dir[23] dir[22] dir[21] dir[20] dir[19] dir[18] dir[17] dir[16] dir[15] dir[14] dir[13] dir[12] dir[11] dir[10] dir[9] dir[8] dir[7] dir[6] dir[5] dir[4] dir[3] dir[2] dir[1] dir[0] dii[27] dii[26] dii[25] dii[24] dii[23] dii[22] dii[21] dii[20] dii[19] dii[18] dii[17] dii[16] dii[15] dii[14] dii[13] dii[12] dii[11] dii[10] dii[9] dii[8] dii[7] dii[6] dii[5] dii[4] dii[3] dii[2] dii[1] dii[0]}
+set_driving_cell -lib_cell CND2X1 $all_inputs_wo_rst_clk
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+set_input_delay 0.6 -clock clk $all_inputs_wo_rst_clk
+1
+set_output_delay 0.6 -clock clk [all_outputs]
+1
+set_fix_hold [ get_clocks clk ]
+1
+set_output_delay 0.3 -clock clk [all_outputs]
+1
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+Information: Retiming is enabled. SVF file must be used for formal verification. (OPT-1210)
+
+Information: There are 98 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'ifft'
+
+Loaded alib file './alib-52/tc240c.db_NOMIN25.alib'
+Information: Ungrouping hierarchy bf before Pass 1 (OPT-776)
+Information: Added key list 'DesignWare' to design 'ifft'. (DDB-72)
+Information: Ungrouping hierarchy m1 before Pass 1 (OPT-776)
+Information: Ungrouping 2 of 7 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'ifft'
+Information: The register 'bf/twiddle_imag_1_reg[35]' is a constant and will be removed. (OPT-1206)
+Information: The register 'bf/twiddle_imag_1_reg[34]' is a constant and will be removed. (OPT-1206)
+Information: The register 'bf/twiddle_imag_1_reg[33]' is a constant and will be removed. (OPT-1206)
+Information: The register 'final_states_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'final_states_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'final_states_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'final_states_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'inp_states_reg[20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'inp_states_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'inp_states_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'inp_states_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'inp_states_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'inp_states_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'inp_states_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'inp_states_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'inp_states_reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'inp_states_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'inp_states_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'inp_states_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'inp_states_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'inp_states_reg[16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'inp_states_reg[17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'inp_states_reg[18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'inp_states_reg[19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'index_ii_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'index_rr_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'op_states_reg[20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'op_states_reg[19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'op_states_reg[18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'op_states_reg[17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'op_states_reg[16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'op_states_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'op_states_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'op_states_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'op_states_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'op_states_reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'op_states_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'op_states_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'op_states_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'op_states_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'op_states_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'op_states_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'op_states_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage_op_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage_op_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[31][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[31][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[31][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[31][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[30][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[30][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[30][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[30][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[29][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[29][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[29][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[29][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[28][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[28][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[28][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[28][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[27][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[27][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[27][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[27][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[26][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[26][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[26][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[26][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[25][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[25][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[25][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[25][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[24][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[24][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[24][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[24][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[23][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[23][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[23][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[23][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[22][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[22][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[22][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[22][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[21][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[21][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[21][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[21][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[20][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[20][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[20][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[20][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[19][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[19][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[19][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[19][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[18][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[18][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[18][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[18][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[17][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[17][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[17][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[17][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[16][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[16][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[16][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[16][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[15][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[15][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[15][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[15][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[14][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[14][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[14][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[14][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[13][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[13][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[13][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[13][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[12][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[12][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[12][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[12][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[11][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[11][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[11][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[11][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[10][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[10][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[10][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[10][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[9][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[9][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[9][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[9][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[8][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[8][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[8][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[8][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[7][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[7][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[7][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[7][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[6][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[6][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[6][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[6][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[5][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[5][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[5][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[5][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[4][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[4][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[4][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[4][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[3][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[3][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[3][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[3][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[2][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[2][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[2][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[2][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[1][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[1][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[1][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[1][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[0][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[0][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[0][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memreal_reg[0][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[31][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[31][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[31][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[31][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[30][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[30][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[30][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[30][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[29][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[29][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[29][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[29][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[28][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[28][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[28][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[28][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[27][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[27][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[27][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[27][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[26][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[26][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[26][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[26][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[25][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[25][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[25][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[25][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[24][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[24][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[24][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[24][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[23][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[23][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[23][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[23][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[22][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[22][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[22][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[22][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[21][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[21][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[21][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[21][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[20][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[20][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[20][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[20][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[19][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[19][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[19][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[19][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[18][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[18][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[18][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[18][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[17][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[17][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[17][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[17][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[16][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[16][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[16][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[16][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[15][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[15][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[15][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[15][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[14][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[14][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[14][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[14][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[13][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[13][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[13][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[13][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[12][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[12][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[12][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[12][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[11][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[11][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[11][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[11][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[10][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[10][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[10][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[10][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[9][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[9][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[9][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[9][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[8][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[8][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[8][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[8][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[7][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[7][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[7][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[7][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[6][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[6][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[6][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[6][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[5][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[5][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[5][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[5][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[4][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[4][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[4][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[4][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[3][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[3][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[3][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[3][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[2][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[2][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[2][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[2][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[1][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[1][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[1][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[1][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[0][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[0][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[0][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'memimag_reg[0][3]' is a constant and will be removed. (OPT-1206)
+Information: In design 'ifft', the register 'bf/twiddle_imag_1_reg[29]' is removed because it is merged to 'bf/twiddle_imag_1_reg[4]'. (OPT-1215)
+Information: In design 'ifft', the register 'bf/twiddle_imag_1_reg[28]' is removed because it is merged to 'bf/twiddle_imag_1_reg[13]'. (OPT-1215)
+Information: In design 'ifft', the register 'bf/twiddle_imag_1_reg[27]' is removed because it is merged to 'bf/twiddle_imag_1_reg[0]'. (OPT-1215)
+Information: In design 'ifft', the register 'bf/twiddle_real_1_reg[33]' is removed because it is merged to 'bf/twiddle_real_1_reg[35]'. (OPT-1215)
+Information: In design 'ifft', the register 'bf/twiddle_real_1_reg[34]' is removed because it is merged to 'bf/twiddle_real_1_reg[35]'. (OPT-1215)
+Information: In design 'ifft', the register 'bf/twiddle_real_1_reg[28]' is removed because it is merged to 'bf/twiddle_real_1_reg[13]'. (OPT-1215)
+Information: In design 'ifft', the register 'bf/twiddle_real_1_reg[29]' is removed because it is merged to 'bf/twiddle_real_1_reg[4]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[31][35]' is removed because it is merged to 'memreal_reg[31][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[31][34]' is removed because it is merged to 'memreal_reg[31][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[31][33]' is removed because it is merged to 'memreal_reg[31][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[31][32]' is removed because it is merged to 'memreal_reg[31][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[31][31]' is removed because it is merged to 'memreal_reg[31][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[30][35]' is removed because it is merged to 'memreal_reg[30][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[30][34]' is removed because it is merged to 'memreal_reg[30][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[30][33]' is removed because it is merged to 'memreal_reg[30][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[30][32]' is removed because it is merged to 'memreal_reg[30][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[30][31]' is removed because it is merged to 'memreal_reg[30][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[29][35]' is removed because it is merged to 'memreal_reg[29][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[29][34]' is removed because it is merged to 'memreal_reg[29][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[29][33]' is removed because it is merged to 'memreal_reg[29][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[29][32]' is removed because it is merged to 'memreal_reg[29][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[29][31]' is removed because it is merged to 'memreal_reg[29][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[28][35]' is removed because it is merged to 'memreal_reg[28][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[28][34]' is removed because it is merged to 'memreal_reg[28][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[28][33]' is removed because it is merged to 'memreal_reg[28][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[28][32]' is removed because it is merged to 'memreal_reg[28][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[28][31]' is removed because it is merged to 'memreal_reg[28][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[27][35]' is removed because it is merged to 'memreal_reg[27][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[27][34]' is removed because it is merged to 'memreal_reg[27][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[27][33]' is removed because it is merged to 'memreal_reg[27][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[27][32]' is removed because it is merged to 'memreal_reg[27][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[27][31]' is removed because it is merged to 'memreal_reg[27][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[26][35]' is removed because it is merged to 'memreal_reg[26][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[26][34]' is removed because it is merged to 'memreal_reg[26][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[26][33]' is removed because it is merged to 'memreal_reg[26][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[26][32]' is removed because it is merged to 'memreal_reg[26][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[26][31]' is removed because it is merged to 'memreal_reg[26][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[25][35]' is removed because it is merged to 'memreal_reg[25][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[25][34]' is removed because it is merged to 'memreal_reg[25][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[25][33]' is removed because it is merged to 'memreal_reg[25][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[25][32]' is removed because it is merged to 'memreal_reg[25][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[25][31]' is removed because it is merged to 'memreal_reg[25][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[24][35]' is removed because it is merged to 'memreal_reg[24][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[24][34]' is removed because it is merged to 'memreal_reg[24][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[24][33]' is removed because it is merged to 'memreal_reg[24][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[24][32]' is removed because it is merged to 'memreal_reg[24][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[24][31]' is removed because it is merged to 'memreal_reg[24][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[23][34]' is removed because it is merged to 'memreal_reg[23][35]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[23][33]' is removed because it is merged to 'memreal_reg[23][35]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[23][32]' is removed because it is merged to 'memreal_reg[23][35]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[23][31]' is removed because it is merged to 'memreal_reg[23][35]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[22][35]' is removed because it is merged to 'memreal_reg[22][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[22][34]' is removed because it is merged to 'memreal_reg[22][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[22][33]' is removed because it is merged to 'memreal_reg[22][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[22][32]' is removed because it is merged to 'memreal_reg[22][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[22][31]' is removed because it is merged to 'memreal_reg[22][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[21][35]' is removed because it is merged to 'memreal_reg[21][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[21][34]' is removed because it is merged to 'memreal_reg[21][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[21][33]' is removed because it is merged to 'memreal_reg[21][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[21][32]' is removed because it is merged to 'memreal_reg[21][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[21][31]' is removed because it is merged to 'memreal_reg[21][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[20][35]' is removed because it is merged to 'memreal_reg[20][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[20][34]' is removed because it is merged to 'memreal_reg[20][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[20][33]' is removed because it is merged to 'memreal_reg[20][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[20][32]' is removed because it is merged to 'memreal_reg[20][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[20][31]' is removed because it is merged to 'memreal_reg[20][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[19][35]' is removed because it is merged to 'memreal_reg[19][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[19][34]' is removed because it is merged to 'memreal_reg[19][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[19][33]' is removed because it is merged to 'memreal_reg[19][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[19][32]' is removed because it is merged to 'memreal_reg[19][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[19][31]' is removed because it is merged to 'memreal_reg[19][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[18][35]' is removed because it is merged to 'memreal_reg[18][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[18][34]' is removed because it is merged to 'memreal_reg[18][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[18][33]' is removed because it is merged to 'memreal_reg[18][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[18][32]' is removed because it is merged to 'memreal_reg[18][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[18][31]' is removed because it is merged to 'memreal_reg[18][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[17][35]' is removed because it is merged to 'memreal_reg[17][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[17][34]' is removed because it is merged to 'memreal_reg[17][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[17][33]' is removed because it is merged to 'memreal_reg[17][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[17][32]' is removed because it is merged to 'memreal_reg[17][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[17][31]' is removed because it is merged to 'memreal_reg[17][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[16][35]' is removed because it is merged to 'memreal_reg[16][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[16][34]' is removed because it is merged to 'memreal_reg[16][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[16][33]' is removed because it is merged to 'memreal_reg[16][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[16][32]' is removed because it is merged to 'memreal_reg[16][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[16][31]' is removed because it is merged to 'memreal_reg[16][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[15][33]' is removed because it is merged to 'memreal_reg[15][34]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[15][32]' is removed because it is merged to 'memreal_reg[15][34]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[15][31]' is removed because it is merged to 'memreal_reg[15][34]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[15][35]' is removed because it is merged to 'memreal_reg[15][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[14][35]' is removed because it is merged to 'memreal_reg[14][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[14][34]' is removed because it is merged to 'memreal_reg[14][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[14][33]' is removed because it is merged to 'memreal_reg[14][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[14][32]' is removed because it is merged to 'memreal_reg[14][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[14][31]' is removed because it is merged to 'memreal_reg[14][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[13][35]' is removed because it is merged to 'memreal_reg[13][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[13][34]' is removed because it is merged to 'memreal_reg[13][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[13][33]' is removed because it is merged to 'memreal_reg[13][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[13][32]' is removed because it is merged to 'memreal_reg[13][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[13][31]' is removed because it is merged to 'memreal_reg[13][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[12][35]' is removed because it is merged to 'memreal_reg[12][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[12][34]' is removed because it is merged to 'memreal_reg[12][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[12][33]' is removed because it is merged to 'memreal_reg[12][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[12][32]' is removed because it is merged to 'memreal_reg[12][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[12][31]' is removed because it is merged to 'memreal_reg[12][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[11][35]' is removed because it is merged to 'memreal_reg[11][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[11][34]' is removed because it is merged to 'memreal_reg[11][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[11][33]' is removed because it is merged to 'memreal_reg[11][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[11][32]' is removed because it is merged to 'memreal_reg[11][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[11][31]' is removed because it is merged to 'memreal_reg[11][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[10][35]' is removed because it is merged to 'memreal_reg[10][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[10][34]' is removed because it is merged to 'memreal_reg[10][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[10][33]' is removed because it is merged to 'memreal_reg[10][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[10][32]' is removed because it is merged to 'memreal_reg[10][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[10][31]' is removed because it is merged to 'memreal_reg[10][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[9][35]' is removed because it is merged to 'memreal_reg[9][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[9][34]' is removed because it is merged to 'memreal_reg[9][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[9][33]' is removed because it is merged to 'memreal_reg[9][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[9][32]' is removed because it is merged to 'memreal_reg[9][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[9][31]' is removed because it is merged to 'memreal_reg[9][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[8][35]' is removed because it is merged to 'memreal_reg[8][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[8][34]' is removed because it is merged to 'memreal_reg[8][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[8][33]' is removed because it is merged to 'memreal_reg[8][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[8][32]' is removed because it is merged to 'memreal_reg[8][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[8][31]' is removed because it is merged to 'memreal_reg[8][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[7][32]' is removed because it is merged to 'memreal_reg[7][33]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[7][31]' is removed because it is merged to 'memreal_reg[7][33]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[7][35]' is removed because it is merged to 'memreal_reg[7][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[7][34]' is removed because it is merged to 'memreal_reg[7][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[6][35]' is removed because it is merged to 'memreal_reg[6][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[6][34]' is removed because it is merged to 'memreal_reg[6][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[6][33]' is removed because it is merged to 'memreal_reg[6][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[6][32]' is removed because it is merged to 'memreal_reg[6][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[6][31]' is removed because it is merged to 'memreal_reg[6][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[5][35]' is removed because it is merged to 'memreal_reg[5][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[5][34]' is removed because it is merged to 'memreal_reg[5][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[5][33]' is removed because it is merged to 'memreal_reg[5][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[5][32]' is removed because it is merged to 'memreal_reg[5][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[5][31]' is removed because it is merged to 'memreal_reg[5][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[4][35]' is removed because it is merged to 'memreal_reg[4][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[4][34]' is removed because it is merged to 'memreal_reg[4][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[4][33]' is removed because it is merged to 'memreal_reg[4][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[4][32]' is removed because it is merged to 'memreal_reg[4][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[4][31]' is removed because it is merged to 'memreal_reg[4][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[3][35]' is removed because it is merged to 'memreal_reg[3][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[3][34]' is removed because it is merged to 'memreal_reg[3][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[3][33]' is removed because it is merged to 'memreal_reg[3][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[3][32]' is removed because it is merged to 'memreal_reg[3][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[3][31]' is removed because it is merged to 'memreal_reg[3][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[2][35]' is removed because it is merged to 'memreal_reg[2][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[2][34]' is removed because it is merged to 'memreal_reg[2][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[2][33]' is removed because it is merged to 'memreal_reg[2][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[2][32]' is removed because it is merged to 'memreal_reg[2][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[2][31]' is removed because it is merged to 'memreal_reg[2][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[1][35]' is removed because it is merged to 'memreal_reg[1][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[1][34]' is removed because it is merged to 'memreal_reg[1][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[1][33]' is removed because it is merged to 'memreal_reg[1][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[1][32]' is removed because it is merged to 'memreal_reg[1][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[1][31]' is removed because it is merged to 'memreal_reg[1][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[0][35]' is removed because it is merged to 'memreal_reg[0][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[0][34]' is removed because it is merged to 'memreal_reg[0][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[0][33]' is removed because it is merged to 'memreal_reg[0][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[0][32]' is removed because it is merged to 'memreal_reg[0][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memreal_reg[0][31]' is removed because it is merged to 'memreal_reg[0][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[31][35]' is removed because it is merged to 'memimag_reg[31][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[31][34]' is removed because it is merged to 'memimag_reg[31][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[31][33]' is removed because it is merged to 'memimag_reg[31][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[31][32]' is removed because it is merged to 'memimag_reg[31][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[31][31]' is removed because it is merged to 'memimag_reg[31][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[30][35]' is removed because it is merged to 'memimag_reg[30][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[30][34]' is removed because it is merged to 'memimag_reg[30][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[30][33]' is removed because it is merged to 'memimag_reg[30][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[30][32]' is removed because it is merged to 'memimag_reg[30][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[30][31]' is removed because it is merged to 'memimag_reg[30][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[29][35]' is removed because it is merged to 'memimag_reg[29][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[29][34]' is removed because it is merged to 'memimag_reg[29][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[29][33]' is removed because it is merged to 'memimag_reg[29][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[29][32]' is removed because it is merged to 'memimag_reg[29][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[29][31]' is removed because it is merged to 'memimag_reg[29][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[28][35]' is removed because it is merged to 'memimag_reg[28][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[28][34]' is removed because it is merged to 'memimag_reg[28][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[28][33]' is removed because it is merged to 'memimag_reg[28][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[28][32]' is removed because it is merged to 'memimag_reg[28][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[28][31]' is removed because it is merged to 'memimag_reg[28][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[27][35]' is removed because it is merged to 'memimag_reg[27][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[27][34]' is removed because it is merged to 'memimag_reg[27][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[27][33]' is removed because it is merged to 'memimag_reg[27][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[27][32]' is removed because it is merged to 'memimag_reg[27][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[27][31]' is removed because it is merged to 'memimag_reg[27][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[26][35]' is removed because it is merged to 'memimag_reg[26][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[26][34]' is removed because it is merged to 'memimag_reg[26][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[26][33]' is removed because it is merged to 'memimag_reg[26][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[26][32]' is removed because it is merged to 'memimag_reg[26][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[26][31]' is removed because it is merged to 'memimag_reg[26][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[25][35]' is removed because it is merged to 'memimag_reg[25][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[25][34]' is removed because it is merged to 'memimag_reg[25][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[25][33]' is removed because it is merged to 'memimag_reg[25][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[25][32]' is removed because it is merged to 'memimag_reg[25][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[25][31]' is removed because it is merged to 'memimag_reg[25][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[24][35]' is removed because it is merged to 'memimag_reg[24][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[24][34]' is removed because it is merged to 'memimag_reg[24][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[24][33]' is removed because it is merged to 'memimag_reg[24][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[24][32]' is removed because it is merged to 'memimag_reg[24][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[24][31]' is removed because it is merged to 'memimag_reg[24][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[23][34]' is removed because it is merged to 'memimag_reg[23][35]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[23][33]' is removed because it is merged to 'memimag_reg[23][35]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[23][32]' is removed because it is merged to 'memimag_reg[23][35]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[23][31]' is removed because it is merged to 'memimag_reg[23][35]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[22][35]' is removed because it is merged to 'memimag_reg[22][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[22][34]' is removed because it is merged to 'memimag_reg[22][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[22][33]' is removed because it is merged to 'memimag_reg[22][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[22][32]' is removed because it is merged to 'memimag_reg[22][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[22][31]' is removed because it is merged to 'memimag_reg[22][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[21][35]' is removed because it is merged to 'memimag_reg[21][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[21][34]' is removed because it is merged to 'memimag_reg[21][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[21][33]' is removed because it is merged to 'memimag_reg[21][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[21][32]' is removed because it is merged to 'memimag_reg[21][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[21][31]' is removed because it is merged to 'memimag_reg[21][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[20][35]' is removed because it is merged to 'memimag_reg[20][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[20][34]' is removed because it is merged to 'memimag_reg[20][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[20][33]' is removed because it is merged to 'memimag_reg[20][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[20][32]' is removed because it is merged to 'memimag_reg[20][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[20][31]' is removed because it is merged to 'memimag_reg[20][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[19][35]' is removed because it is merged to 'memimag_reg[19][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[19][34]' is removed because it is merged to 'memimag_reg[19][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[19][33]' is removed because it is merged to 'memimag_reg[19][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[19][32]' is removed because it is merged to 'memimag_reg[19][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[19][31]' is removed because it is merged to 'memimag_reg[19][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[18][35]' is removed because it is merged to 'memimag_reg[18][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[18][34]' is removed because it is merged to 'memimag_reg[18][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[18][33]' is removed because it is merged to 'memimag_reg[18][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[18][32]' is removed because it is merged to 'memimag_reg[18][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[18][31]' is removed because it is merged to 'memimag_reg[18][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[17][35]' is removed because it is merged to 'memimag_reg[17][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[17][34]' is removed because it is merged to 'memimag_reg[17][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[17][33]' is removed because it is merged to 'memimag_reg[17][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[17][32]' is removed because it is merged to 'memimag_reg[17][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[17][31]' is removed because it is merged to 'memimag_reg[17][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[16][35]' is removed because it is merged to 'memimag_reg[16][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[16][34]' is removed because it is merged to 'memimag_reg[16][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[16][33]' is removed because it is merged to 'memimag_reg[16][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[16][32]' is removed because it is merged to 'memimag_reg[16][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[16][31]' is removed because it is merged to 'memimag_reg[16][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[15][33]' is removed because it is merged to 'memimag_reg[15][34]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[15][32]' is removed because it is merged to 'memimag_reg[15][34]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[15][31]' is removed because it is merged to 'memimag_reg[15][34]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[15][35]' is removed because it is merged to 'memimag_reg[15][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[14][35]' is removed because it is merged to 'memimag_reg[14][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[14][34]' is removed because it is merged to 'memimag_reg[14][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[14][33]' is removed because it is merged to 'memimag_reg[14][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[14][32]' is removed because it is merged to 'memimag_reg[14][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[14][31]' is removed because it is merged to 'memimag_reg[14][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[13][35]' is removed because it is merged to 'memimag_reg[13][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[13][34]' is removed because it is merged to 'memimag_reg[13][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[13][33]' is removed because it is merged to 'memimag_reg[13][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[13][32]' is removed because it is merged to 'memimag_reg[13][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[13][31]' is removed because it is merged to 'memimag_reg[13][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[12][35]' is removed because it is merged to 'memimag_reg[12][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[12][34]' is removed because it is merged to 'memimag_reg[12][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[12][33]' is removed because it is merged to 'memimag_reg[12][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[12][32]' is removed because it is merged to 'memimag_reg[12][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[12][31]' is removed because it is merged to 'memimag_reg[12][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[11][35]' is removed because it is merged to 'memimag_reg[11][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[11][34]' is removed because it is merged to 'memimag_reg[11][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[11][33]' is removed because it is merged to 'memimag_reg[11][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[11][32]' is removed because it is merged to 'memimag_reg[11][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[11][31]' is removed because it is merged to 'memimag_reg[11][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[10][35]' is removed because it is merged to 'memimag_reg[10][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[10][34]' is removed because it is merged to 'memimag_reg[10][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[10][33]' is removed because it is merged to 'memimag_reg[10][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[10][32]' is removed because it is merged to 'memimag_reg[10][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[10][31]' is removed because it is merged to 'memimag_reg[10][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[9][35]' is removed because it is merged to 'memimag_reg[9][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[9][34]' is removed because it is merged to 'memimag_reg[9][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[9][33]' is removed because it is merged to 'memimag_reg[9][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[9][32]' is removed because it is merged to 'memimag_reg[9][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[9][31]' is removed because it is merged to 'memimag_reg[9][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[8][35]' is removed because it is merged to 'memimag_reg[8][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[8][34]' is removed because it is merged to 'memimag_reg[8][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[8][33]' is removed because it is merged to 'memimag_reg[8][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[8][32]' is removed because it is merged to 'memimag_reg[8][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[8][31]' is removed because it is merged to 'memimag_reg[8][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[7][32]' is removed because it is merged to 'memimag_reg[7][33]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[7][31]' is removed because it is merged to 'memimag_reg[7][33]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[7][35]' is removed because it is merged to 'memimag_reg[7][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[7][34]' is removed because it is merged to 'memimag_reg[7][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[6][35]' is removed because it is merged to 'memimag_reg[6][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[6][34]' is removed because it is merged to 'memimag_reg[6][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[6][33]' is removed because it is merged to 'memimag_reg[6][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[6][32]' is removed because it is merged to 'memimag_reg[6][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[6][31]' is removed because it is merged to 'memimag_reg[6][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[5][35]' is removed because it is merged to 'memimag_reg[5][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[5][34]' is removed because it is merged to 'memimag_reg[5][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[5][33]' is removed because it is merged to 'memimag_reg[5][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[5][32]' is removed because it is merged to 'memimag_reg[5][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[5][31]' is removed because it is merged to 'memimag_reg[5][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[4][35]' is removed because it is merged to 'memimag_reg[4][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[4][34]' is removed because it is merged to 'memimag_reg[4][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[4][33]' is removed because it is merged to 'memimag_reg[4][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[4][32]' is removed because it is merged to 'memimag_reg[4][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[4][31]' is removed because it is merged to 'memimag_reg[4][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[3][35]' is removed because it is merged to 'memimag_reg[3][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[3][34]' is removed because it is merged to 'memimag_reg[3][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[3][33]' is removed because it is merged to 'memimag_reg[3][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[3][32]' is removed because it is merged to 'memimag_reg[3][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[3][31]' is removed because it is merged to 'memimag_reg[3][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[2][35]' is removed because it is merged to 'memimag_reg[2][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[2][34]' is removed because it is merged to 'memimag_reg[2][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[2][33]' is removed because it is merged to 'memimag_reg[2][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[2][32]' is removed because it is merged to 'memimag_reg[2][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[2][31]' is removed because it is merged to 'memimag_reg[2][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[1][35]' is removed because it is merged to 'memimag_reg[1][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[1][34]' is removed because it is merged to 'memimag_reg[1][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[1][33]' is removed because it is merged to 'memimag_reg[1][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[1][32]' is removed because it is merged to 'memimag_reg[1][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[1][31]' is removed because it is merged to 'memimag_reg[1][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[0][35]' is removed because it is merged to 'memimag_reg[0][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[0][34]' is removed because it is merged to 'memimag_reg[0][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[0][33]' is removed because it is merged to 'memimag_reg[0][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[0][32]' is removed because it is merged to 'memimag_reg[0][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'memimag_reg[0][31]' is removed because it is merged to 'memimag_reg[0][36]'. (OPT-1215)
+Information: In design 'ifft', the register 'bf/CCC_imag_reg[0]' is removed because it is merged to 'bf/imag_cc_reg[0]'. (OPT-1215)
+ Implement Synthetic for 'ifft'.
+  Processing 'butterfly_DW02_mult_4_stage_J2_0'
+  Processing 'butterfly_DW02_mult_4_stage_J2_3'
+  Processing 'butterfly_DW02_mult_4_stage_J2_1'
+  Processing 'butterfly_DW02_mult_4_stage_J2_2'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Warning: Main library 'tc240c' does not specify the following unit required for power: 'Leakage Power'. (PWR-424)
+Information: The register 'bf/m4/mult_x_1/clk_r_REG185_S1' is a constant and will be removed. (OPT-1206)
+Information: The register 'bf/m4/mult_x_1/clk_r_REG186_S1' is a constant and will be removed. (OPT-1206)
+Information: The register 'bf/m4/mult_x_1/clk_r_REG184_S1' is a constant and will be removed. (OPT-1206)
+Information: The register 'bf/m4/mult_x_1/clk_r_REG183_S1' is a constant and will be removed. (OPT-1206)
+Information: The register 'bf/m3/mult_x_1/clk_r_REG184_S1' is a constant and will be removed. (OPT-1206)
+Information: The register 'bf/m2/mult_x_1/clk_r_REG187_S1' is a constant and will be removed. (OPT-1206)
+Information: The register 'bf/m2/mult_x_1/clk_r_REG185_S1' is a constant and will be removed. (OPT-1206)
+Information: The register 'bf/m2/mult_x_1/clk_r_REG184_S1' is a constant and will be removed. (OPT-1206)
+Information: The register 'bf/m2/mult_x_1/clk_r_REG186_S1' is a constant and will be removed. (OPT-1206)
+Information: The register 'bf/m2/mult_x_1/clk_r_REG188_S1' is a constant and will be removed. (OPT-1206)
+Information: The register 'bf/m1/mult_x_1/clk_r_REG186_S1' is a constant and will be removed. (OPT-1206)
+Information: In design 'ifft', the register 'bf/m3/mult_x_1/clk_r_REG183_S1' is removed because it is merged to 'bf/m3/mult_x_1/clk_r_REG186_S1'. (OPT-1215)
+Information: In design 'ifft', the register 'bf/m1/mult_x_1/clk_r_REG184_S1' is removed because it is merged to 'bf/m1/mult_x_1/clk_r_REG188_S1'. (OPT-1215)
+Information: In design 'ifft', the register 'bf/m1/mult_x_1/clk_r_REG185_S1' is removed because it is merged to 'bf/m1/mult_x_1/clk_r_REG187_S1'. (OPT-1215)
+Information: In design 'ifft', the register 'final_states_reg[0]' is removed because it is merged to 'pushout_1_reg'. (OPT-1215)
+Information: In design 'ifft', the register 'bf/CCC_real_reg[0]' is removed because it is merged to 'bf/real_cc_reg[0]'. (OPT-1215)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Updating design information... (UID-85)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+  Retiming butterfly_DW02_mult_4_stage_J2_3 (bf/m1)
+  Preferred flip-flop is CFD2XL with setup = 0.21
+
+
+  Retiming base-clock clk, rising edge.
+  Beginning minimum period retiming ...
+  ... minimum period retiming done.
+  Beginning minimum area retiming step 1 ...
+  ... minimum area retiming step 1 done.
+  Beginning minimum area retiming step 2 ...
+  5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100% 
+  ... minimum area retiming step 2 done.
+  Beginning minimum area retiming step 3 ...
+  10%   ... minimum area retiming step 1 done.
+  Beginning minimum area retiming step 2 ...
+  5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100% 
+  ... minimum area retiming step 2 done.
+  Beginning minimum area retiming step 3 ...
+  10% 20% 30% 40% 50% 60% 70% ... 100% 
+  ... minimum area retiming step 3 done.
+  Beginning final register move ...
+  ... final register move done.
+  Lower bound estimate = 5.88
+  Critical path length = 5.88
+  Clock correction = 0.94 (clock-to-Q delay = 0.48, setup = 0.21, uncertainty = 0.25)
+  Retiming butterfly_DW02_mult_4_stage_J2_2 (bf/m2)
+  Preferred flip-flop is CFD2XL with setup = 0.21
+
+
+  Retiming base-clock clk, rising edge.
+  Beginning minimum period retiming ...
+  ... minimum period retiming done.
+  Beginning minimum area retiming step 1 ...
+  ... minimum area retiming step 1 done.
+  Beginning minimum area retiming step 2 ...
+  5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100% 
+  ... minimum area retiming step 2 done.
+  Beginning minimum area retiming step 3 ...
+  10%   ... minimum area retiming step 1 done.
+  Beginning minimum area retiming step 2 ...
+  5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100% 
+  ... minimum area retiming step 2 done.
+  Beginning minimum area retiming step 3 ...
+  10% 20% 30% 40% 50% 60% 70% ... 100% 
+  ... minimum area retiming step 3 done.
+  Beginning final register move ...
+  ... final register move done.
+  Lower bound estimate = 5.85
+  Critical path length = 5.85
+  Clock correction = 0.94 (clock-to-Q delay = 0.48, setup = 0.21, uncertainty = 0.25)
+  Retiming butterfly_DW02_mult_4_stage_J2_1 (bf/m3)
+  Preferred flip-flop is CFD2XL with setup = 0.21
+
+
+  Retiming base-clock clk, rising edge.
+  Beginning minimum period retiming ...
+  ... minimum period retiming done.
+  Beginning minimum area retiming step 1 ...
+  ... minimum area retiming step 1 done.
+  Beginning minimum area retiming step 2 ...
+  5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100% 
+  ... minimum area retiming step 2 done.
+  Beginning minimum area retiming step 3 ...
+  10% 20% 30% 40% 50% 60% 70% ... 100% 
+  ... minimum area retiming step 3 done.
+  Beginning final register move ...
+  ... final register move done.
+  Lower bound estimate = 4.98
+  Critical path length = 4.98
+  Clock correction = 0.94 (clock-to-Q delay = 0.48, setup = 0.21, uncertainty = 0.25)
+  Retiming butterfly_DW02_mult_4_stage_J2_0 (bf/m4)
+  Preferred flip-flop is CFD2XL with setup = 0.21
+
+
+  Retiming base-clock clk, rising edge.
+  Beginning minimum period retiming ...
+  ... minimum period retiming done.
+  Beginning minimum area retiming step 1 ...
+  ... minimum area retiming step 1 done.
+  Beginning minimum area retiming step 2 ...
+  5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100% 
+  ... minimum area retiming step 2 done.
+  Beginning minimum area retiming step 3 ...
+  10%   ... minimum area retiming step 1 done.
+  Beginning minimum area retiming step 2 ...
+  5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100% 
+  ... minimum area retiming step 2 done.
+  Beginning minimum area retiming step 3 ...
+  10% 20% 30% 40% 50% 60% 70% ... 100% 
+  ... minimum area retiming step 3 done.
+  Beginning final register move ...
+  ... final register move done.
+  Lower bound estimate = 4.98
+  Critical path length = 4.98
+  Clock correction = 0.94 (clock-to-Q delay = 0.48, setup = 0.21, uncertainty = 0.25)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+  Mapping Optimization (Phase 4)
+  Mapping Optimization (Phase 5)
+  Mapping Optimization (Phase 6)
+  Mapping Optimization (Phase 7)
+  Mapping Optimization (Phase 8)
+  Mapping Optimization (Phase 9)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:03:24  186357.0      1.81     538.5       0.0 bf/m2/clk_r_REG354_S2/D      0.0000      0.00  
+    0:03:24  186357.0      1.81     538.5       0.0 bf/m2/clk_r_REG354_S2/D      0.0000      0.00  
+    0:03:26  186397.0      1.68     515.0       0.0 bf/m2/clk_r_REG354_S2/D      0.0000      0.00  
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:04:05  141228.5      2.38     470.1       0.0                              0.0000      0.00  
+    0:04:12  142684.5      1.12     316.7       0.0                              0.0000      0.00  
+    0:04:12  142684.5      1.12     316.7       0.0                              0.0000      0.00  
+    0:04:13  142693.5      1.12     316.7       0.0                              0.0000      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:04:30  142515.0      1.22     316.1       0.0                              0.0000      0.00  
+    0:04:36  141441.0      1.22     312.7       0.0                              0.0000      0.00  
+    0:04:38  141387.0      1.15     297.6       4.2                              0.0000      0.00  
+    0:04:42  141279.0      1.15     293.2       4.2                              0.0000      0.00  
+    0:04:42  141279.0      1.15     293.2       4.2                              0.0000      0.00  
+    0:05:09  145808.5      0.69     209.7       4.2                              0.0000      0.00  
+    0:05:09  145808.5      0.69     209.7       4.2                              0.0000      0.00  
+    0:05:09  145829.5      0.69     208.2       4.2                              0.0000      0.00  
+    0:05:09  145829.5      0.69     208.2       4.2                              0.0000      0.00  
+    0:05:27  148161.5      0.62     191.2       4.2                              0.0000      0.00  
+    0:05:27  148161.5      0.62     191.2       4.2                              0.0000      0.00  
+    0:05:32  148778.5      0.54     167.3      12.5                              0.0000      0.00  
+    0:05:32  148778.5      0.54     167.3      12.5                              0.0000      0.00  
+    0:05:55  150860.5      0.50     151.7      12.5                              0.0000      0.00  
+    0:05:55  150860.5      0.50     151.7      12.5                              0.0000      0.00  
+    0:06:12  152109.5      0.41     125.7      16.5                              0.0000      0.00  
+    0:06:12  152109.5      0.41     125.7      16.5                              0.0000      0.00  
+    0:06:13  152112.0      0.41     125.4      16.5                              0.0000      0.00  
+    0:06:13  152112.0      0.41     125.4      16.5                              0.0000      0.00  
+    0:06:14  152142.5      0.41     124.4      16.5                              0.0000      0.00  
+    0:06:14  152142.5      0.41     124.4      16.5                              0.0000      0.00  
+    0:06:15  152145.0      0.41     124.4      16.5                              0.0000      0.00  
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:06:15  152145.0      0.41     124.4      16.5                              0.0000      0.00  
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+    0:06:18  152156.0      0.39     123.2       0.0                              0.0000      0.00  
+    0:06:23  152333.0      0.39     122.6       0.0                              0.0000      0.00  
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+    0:06:26  152338.0      0.39     121.3       0.0 bf/m1/clk_r_REG358_S2/D      0.0000      0.00  
+    0:06:26  152374.5      0.39     120.6       0.0                              0.0000      0.00  
+    0:06:33  152766.5      0.38     119.0       0.0                              0.0000      0.00  
+    0:06:33  152766.5      0.38     119.0       0.0                              0.0000      0.00  
+    0:06:37  151688.0      0.38     113.4       0.0                              0.0000      0.00  
+    0:06:37  151688.0      0.38     113.4       0.0                              0.0000      0.00  
+    0:06:39  151799.0      0.38     113.2       0.0                              0.0000      0.00  
+    0:06:39  151799.0      0.38     113.2       0.0                              0.0000      0.00  
+    0:06:39  151799.0      0.38     113.2       0.0                              0.0000      0.00  
+    0:06:39  151799.0      0.38     113.2       0.0                              0.0000      0.00  
+    0:06:39  151799.0      0.38     113.2       0.0                              0.0000      0.00  
+    0:06:39  151799.0      0.38     113.2       0.0                              0.0000      0.00  
+    0:06:41  151865.0      0.38     113.8       0.0                              0.0000      0.00  
+    0:06:41  151865.0      0.38     113.8       0.0                              0.0000      0.00  
+    0:06:41  151865.0      0.38     113.8       0.0                              0.0000      0.00  
+    0:06:41  151865.0      0.38     113.8       0.0                              0.0000      0.00  
+    0:06:41  151865.0      0.38     113.8       0.0                              0.0000      0.00  
+    0:06:41  151865.0      0.38     113.8       0.0                              0.0000      0.00  
+    0:06:42  151865.0      0.38     113.8       0.0                              0.0000      0.00  
+    0:06:42  151865.0      0.38     113.8       0.0                              0.0000      0.00  
+    0:06:42  151865.0      0.38     113.8       0.0                              0.0000      0.00  
+    0:06:42  151865.0      0.38     113.8       0.0                              0.0000      0.00  
+    0:06:42  151865.0      0.38     113.8       0.0                              0.0000      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:06:45  151865.0      0.38     113.8       0.0                              0.0000      0.00  
+    0:06:51  149683.0      0.38     111.5       0.0                              0.0000      0.00  
+    0:06:52  149655.5      0.38     111.2       0.0                              0.0000      0.00  
+    0:06:52  149655.5      0.38     111.2       0.0                              0.0000      0.00  
+    0:06:56  149475.0      0.38     110.4       0.0                              0.0000      0.00  
+    0:06:59  148925.5      0.38     108.6       0.0                              0.0000      0.00  
+    0:07:01  148740.0      0.38     108.0       0.0                              0.0000      0.00  
+    0:07:01  148589.0      0.38     107.8       0.0                              0.0000      0.00  
+    0:07:02  148610.5      0.38     107.5       0.0                              0.0000      0.00  
+    0:07:04  148565.5      0.38     104.1       0.0                              0.0000      0.00  
+    0:07:04  148565.5      0.38     104.1       0.0                              0.0000      0.00  
+    0:07:13  147214.0      0.38     103.9       0.0                              0.0000      0.00  
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'ifft' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'bf/m4/CLK': 15047 load(s), 1 driver(s)
+Information: State dependent leakage is now switched from off to on.
+Warning: Main library 'tc240c' does not specify the following unit required for power: 'Leakage Power'. (PWR-424)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+create_clock clk -name clk -period 4.0
+1
+update_timing
+Information: Updating design information... (UID-85)
+Warning: Design 'ifft' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+1
+report_timing -max_paths 5
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 5
+Design : ifft
+Version: K-2015.06-SP5-1
+Date   : Tue May  9 16:17:56 2017
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: NOMIN25   Library: tc240c
+Wire Load Model Mode: top
+
+  Startpoint: bf/m2/clk_r_REG470_S1
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: bf/m2/clk_r_REG352_S2
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  bf/m2/clk_r_REG470_S1/CP (CFD1QX4)       0.00 #     0.00 r
+  bf/m2/clk_r_REG470_S1/Q (CFD1QX4)        0.32       0.32 f
+  bf/m2/U2952/Z (CENX4)                    0.16       0.48 f
+  bf/m2/U2954/Z (CNR2IX4)                  0.09       0.57 r
+  bf/m2/U2670/Z (CIVX4)                    0.08       0.65 f
+  bf/m2/U1997/Z (CMX2GX2)                  0.26       0.91 f
+  bf/m2/U1635/Z (CEN3X1)                   0.17       1.08 r
+  bf/m2/U2075/Z (CEO3X2)                   0.44       1.52 f
+  bf/m2/U1579/Z (COND1X2)                  0.09       1.61 r
+  bf/m2/U1668/Z (CND2X2)                   0.09       1.71 f
+  bf/m2/U1741/Z (CENX2)                    0.13       1.84 r
+  bf/m2/U1018/Z (CENX2)                    0.16       2.00 r
+  bf/m2/U1017/Z (CND2X2)                   0.10       2.10 f
+  bf/m2/U50/Z (CND2X1)                     0.07       2.17 r
+  bf/m2/U2170/Z (CND3X2)                   0.10       2.26 f
+  bf/m2/U2168/Z (CANR1X2)                  0.09       2.35 r
+  bf/m2/U1982/Z (COND1X2)                  0.13       2.47 f
+  bf/m2/U2414/Z (CND3X2)                   0.06       2.53 r
+  bf/m2/U2413/Z (CND4X2)                   0.13       2.66 f
+  bf/m2/U2412/Z (CND2X2)                   0.06       2.72 r
+  bf/m2/U2410/Z (CND2X2)                   0.06       2.78 f
+  bf/m2/U2754/Z (CENX1)                    0.12       2.90 f
+  bf/m2/clk_r_REG352_S2/D (CFD1QX2)        0.00       2.90 f
+  data arrival time                                   2.90
+
+  clock clk (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  clock uncertainty                       -0.25       3.75
+  bf/m2/clk_r_REG352_S2/CP (CFD1QX2)       0.00       3.75 r
+  library setup time                      -0.22       3.53
+  data required time                                  3.53
+  -----------------------------------------------------------
+  data required time                                  3.53
+  data arrival time                                  -2.90
+  -----------------------------------------------------------
+  slack (MET)                                         0.62
+
+
+  Startpoint: bf/m2/clk_r_REG470_S1
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: bf/m2/clk_r_REG356_S2
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  bf/m2/clk_r_REG470_S1/CP (CFD1QX4)       0.00 #     0.00 r
+  bf/m2/clk_r_REG470_S1/Q (CFD1QX4)        0.32       0.32 f
+  bf/m2/U2952/Z (CENX4)                    0.16       0.48 f
+  bf/m2/U2954/Z (CNR2IX4)                  0.09       0.57 r
+  bf/m2/U2670/Z (CIVX4)                    0.08       0.65 f
+  bf/m2/U1997/Z (CMX2GX2)                  0.26       0.91 f
+  bf/m2/U1635/Z (CEN3X1)                   0.17       1.08 r
+  bf/m2/U2075/Z (CEO3X2)                   0.44       1.52 f
+  bf/m2/U1579/Z (COND1X2)                  0.09       1.61 r
+  bf/m2/U1668/Z (CND2X2)                   0.09       1.71 f
+  bf/m2/U1741/Z (CENX2)                    0.13       1.84 r
+  bf/m2/U1018/Z (CENX2)                    0.16       2.00 r
+  bf/m2/U1017/Z (CND2X2)                   0.10       2.10 f
+  bf/m2/U50/Z (CND2X1)                     0.07       2.17 r
+  bf/m2/U2170/Z (CND3X2)                   0.10       2.26 f
+  bf/m2/U2168/Z (CANR1X2)                  0.09       2.35 r
+  bf/m2/U1982/Z (COND1X2)                  0.13       2.47 f
+  bf/m2/U2414/Z (CND3X2)                   0.06       2.53 r
+  bf/m2/U2413/Z (CND4X2)                   0.13       2.66 f
+  bf/m2/U2773/Z (COND1X1)                  0.09       2.75 r
+  bf/m2/U3347/Z (CENXL)                    0.16       2.91 r
+  bf/m2/clk_r_REG356_S2/D (CFD1QX2)        0.00       2.91 r
+  data arrival time                                   2.91
+
+  clock clk (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  clock uncertainty                       -0.25       3.75
+  bf/m2/clk_r_REG356_S2/CP (CFD1QX2)       0.00       3.75 r
+  library setup time                      -0.21       3.54
+  data required time                                  3.54
+  -----------------------------------------------------------
+  data required time                                  3.54
+  data arrival time                                  -2.91
+  -----------------------------------------------------------
+  slack (MET)                                         0.63
+
+
+  Startpoint: bf/twiddle_real_1_reg[10]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: bf/m3/clk_r_REG290_S1
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  bf/twiddle_real_1_reg[10]/CP (CFD2QX2)                  0.00 #     0.00 r
+  bf/twiddle_real_1_reg[10]/Q (CFD2QX2)                   0.36       0.36 f
+  bf/m3/B[10] (butterfly_DW02_mult_4_stage_J2_1)          0.00       0.36 f
+  bf/m3/U1956/Z (CIVX2)                                   0.07       0.42 r
+  bf/m3/U1955/Z (CENX2)                                   0.14       0.56 r
+  bf/m3/U1954/Z (CND2X2)                                  0.10       0.67 f
+  bf/m3/U1807/Z1 (CIVDX2)                                 0.15       0.82 f
+  bf/m3/U3836/Z (CMX2GX1)                                 0.23       1.05 f
+  bf/m3/U3870/S (CFA1X1)                                  0.40       1.44 r
+  bf/m3/U3935/S (CFA1X1)                                  0.35       1.79 f
+  bf/m3/U3937/CO (CFA1X1)                                 0.29       2.08 f
+  bf/m3/U3941/S (CFA1X1)                                  0.37       2.46 r
+  bf/m3/U1939/Z (CEO3X1)                                  0.36       2.82 f
+  bf/m3/U1938/Z (CNR2XL)                                  0.07       2.89 r
+  bf/m3/clk_r_REG290_S1/D (CFD1QXL)                       0.00       2.89 r
+  data arrival time                                                  2.89
+
+  clock clk (rise edge)                                   4.00       4.00
+  clock network delay (ideal)                             0.00       4.00
+  clock uncertainty                                      -0.25       3.75
+  bf/m3/clk_r_REG290_S1/CP (CFD1QXL)                      0.00       3.75 r
+  library setup time                                     -0.23       3.52
+  data required time                                                 3.52
+  --------------------------------------------------------------------------
+  data required time                                                 3.52
+  data arrival time                                                 -2.89
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.63
+
+
+  Startpoint: bf/m4/clk_r_REG442_S1
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: bf/m4/clk_r_REG256_S2
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  bf/m4/clk_r_REG442_S1/CP (CFD1QX2)       0.00 #     0.00 r
+  bf/m4/clk_r_REG442_S1/Q (CFD1QX2)        0.26       0.26 f
+  bf/m4/U1258/Z (CND2IX1)                  0.12       0.39 f
+  bf/m4/U793/Z (CNR2X2)                    0.15       0.54 r
+  bf/m4/U790/Z (CIVX2)                     0.22       0.75 f
+  bf/m4/U3247/Z (CMX2GX1)                  0.23       0.98 f
+  bf/m4/U3297/CO (CFA1X1)                  0.26       1.24 f
+  bf/m4/U3312/S (CFA1X1)                   0.41       1.65 r
+  bf/m4/U3340/CO (CFA1X1)                  0.23       1.88 r
+  bf/m4/U3497/S (CFA1X1)                   0.36       2.25 f
+  bf/m4/U3505/CO (CFA1X1)                  0.29       2.54 f
+  bf/m4/U3517/S (CFA1X1)                   0.38       2.92 r
+  bf/m4/clk_r_REG256_S2/D (CFD1QX2)        0.00       2.92 r
+  data arrival time                                   2.92
+
+  clock clk (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  clock uncertainty                       -0.25       3.75
+  bf/m4/clk_r_REG256_S2/CP (CFD1QX2)       0.00       3.75 r
+  library setup time                      -0.20       3.55
+  data required time                                  3.55
+  -----------------------------------------------------------
+  data required time                                  3.55
+  data arrival time                                  -2.92
+  -----------------------------------------------------------
+  slack (MET)                                         0.63
+
+
+  Startpoint: bf/twiddle_real_1_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: bf/m3/clk_r_REG415_S1
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  bf/twiddle_real_1_reg[4]/CP (CFD2QX4)                   0.00 #     0.00 r
+  bf/twiddle_real_1_reg[4]/Q (CFD2QX4)                    0.41       0.41 r
+  bf/m3/B[4] (butterfly_DW02_mult_4_stage_J2_1)           0.00       0.41 r
+  bf/m3/U1942/Z (CIVX4)                                   0.07       0.48 f
+  bf/m3/U1941/Z (CENX4)                                   0.15       0.63 f
+  bf/m3/U1384/Z (CNIVX2)                                  0.14       0.77 f
+  bf/m3/U1430/Z (CND2X1)                                  0.05       0.82 r
+  bf/m3/U2303/Z (CNR2IX2)                                 0.17       0.98 r
+  bf/m3/U2475/S (CFA1X1)                                  0.36       1.34 f
+  bf/m3/U1354/CO (CFA1X2)                                 0.32       1.66 f
+  bf/m3/U1387/Z (CENX2)                                   0.15       1.81 f
+  bf/m3/U338/Z (CENX2)                                    0.14       1.95 f
+  bf/m3/U2625/S (CFA1X1)                                  0.38       2.33 r
+  bf/m3/U1603/Z (CND2X1)                                  0.10       2.44 f
+  bf/m3/U1341/Z (COND1X2)                                 0.08       2.52 r
+  bf/m3/U1069/Z (CIVX2)                                   0.08       2.60 f
+  bf/m3/U1068/Z (COND1X2)                                 0.07       2.67 r
+  bf/m3/U1065/Z (CANR1X2)                                 0.08       2.75 f
+  bf/m3/U1064/Z (CENX1)                                   0.14       2.89 f
+  bf/m3/clk_r_REG415_S1/D (CFD1QX2)                       0.00       2.89 f
+  data arrival time                                                  2.89
+
+  clock clk (rise edge)                                   4.00       4.00
+  clock network delay (ideal)                             0.00       4.00
+  clock uncertainty                                      -0.25       3.75
+  bf/m3/clk_r_REG415_S1/CP (CFD1QX2)                      0.00       3.75 r
+  library setup time                                     -0.22       3.53
+  data required time                                                 3.53
+  --------------------------------------------------------------------------
+  data required time                                                 3.53
+  data arrival time                                                 -2.89
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.63
+
+
+1
+write -hierarchy -format verilog -output ifft_gates.v
+Writing verilog file '/home/011432876@SJSUAD.SJSU.EDU/287/project/submission/ifft_gates.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Verilog writer has added 16 nets to module ifft using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+1
+quit
+
+Thank you...
